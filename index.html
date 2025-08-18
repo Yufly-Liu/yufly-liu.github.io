@@ -174,57 +174,56 @@
       </div>
     </header>
 
-    <!-- 项目展示 -->
-    <section class="projects" style="text-align: left;">
-      <h2>Projects</h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
-        
-        <!-- 项目 1：学术论文 -->
-        <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-          <a href="https://github.com/Yufly-Liu/project-one" target="_blank">
-            <div>
-              <h3 style="color: #3b82f6; margin-bottom: 10px; font-size: 1.1rem;">A Method of Separating Interreflection in Digital Fringe Projection Profilometry</h3>
-              <p style="color: #4b5563; font-size: 0.95rem; line-height: 1.5;">
-                在结构光三维测量中，凹面物体的互反射会严重影响精度。本文提出使用高频掩码调制条纹与格雷码结合的方法，有效分离互反射干扰。该工作已发表于国际会议 <strong>ICIVP 2025</strong>。
-              </p>
-              <p style="margin-top: 10px; font-size: 0.85rem; color: #6b7280;">
-                #C++ #OpenCV #Matlab #三维重建 #互反射去除
-              </p>
-            </div>
-          </a>
-        </div>
-
-        <!-- 项目 2：天气小程序 -->
-        <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-          <a href="https://github.com/Yufly-Liu/project-two" target="_blank">
-            <div>
-              <h3 style="color: #3b82f6; margin-bottom: 10px; font-size: 1.1rem;">天气预报小程序</h3>
-              <p style="color: #4b5563; font-size: 0.95rem; line-height: 1.5;">
-                基于微信小程序开发的天气应用，实时获取城市天气与空气质量，支持定位与多城市切换。
-              </p>
-              <p style="margin-top: 10px; font-size: 0.85rem; color: #6b7280;">
-                #小程序 #API #UI设计 #JavaScript
-              </p>
-            </div>
-          </a>
-        </div>
-
-        <!-- 项目 3：AI 写作助手 -->
-        <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-          <a href="https://github.com/Yufly-Liu/project-three" target="_blank">
-            <div>
-              <h3 style="color: #3b82f6; margin-bottom: 10px; font-size: 1.1rem;">AI 写作助手</h3>
-              <p style="color: #4b5563; font-size: 0.95rem; line-height: 1.5;">
-                基于大模型 API 的文本生成工具，支持文章润色、摘要生成、多语言翻译，提升写作效率。
-              </p>
-              <p style="margin-top: 10px; font-size: 0.85rem; color: #6b7280;">
-                #AI #Python #NLP #LangChain
-              </p>
-            </div>
-          </a>
-        </div>
-
-      </div>
+    <!-- 项目展示：上下排版 -->
+    <section class="projects" style="text-align: left; margin-top: 40px;">
+      <h2 style="color: #1e3a8a; margin-bottom: 24px; font-size: 1.8rem; border-left: 4px solid #3b82f6; padding-left: 12px;">
+        Projects
+      </h2>
+    
+      <!-- 项目 1 -->
+      <article style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); margin-bottom: 24px; transition: transform 0.3s ease;">
+        <a href="https://github.com/Yufly-Liu/project-one" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
+          <div style="padding: 20px;">
+            <h3 style="color: #3b82f6; margin-bottom: 10px; font-size: 1.2rem;">A Method of Separating Interreflection in Digital Fringe Projection Profilometry</h3>
+            <p style="color: #4b5563; font-size: 1.05rem; line-height: 1.6;">
+              在结构光三维测量中，凹面物体的互反射会严重影响精度。本文提出使用高频掩码调制条纹与格雷码结合的方法，有效分离互反射干扰。该工作已发表于国际会议 <strong>ICIVP 2025</strong>。
+            </p>
+            <p style="margin-top: 12px; font-size: 0.9rem; color: #6b7280;">
+              #C++ #OpenCV #Matlab #三维重建 #互反射去除
+            </p>
+          </div>
+        </a>
+      </article>
+    
+      <!-- 项目 2 -->
+      <article style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); margin-bottom: 24px; transition: transform 0.3s ease;">
+        <a href="https://github.com/Yufly-Liu/project-two" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
+          <div style="padding: 20px;">
+            <h3 style="color: #3b82f6; margin-bottom: 10px; font-size: 1.2rem;">天气预报小程序</h3>
+            <p style="color: #4b5563; font-size: 1.05rem; line-height: 1.6;">
+              基于微信小程序开发的天气应用，实时获取城市天气与空气质量，支持定位与多城市切换。
+            </p>
+            <p style="margin-top: 12px; font-size: 0.9rem; color: #6b7280;">
+              #小程序 #API #UI设计 #JavaScript
+            </p>
+          </div>
+        </a>
+      </article>
+    
+      <!-- 项目 3 -->
+      <article style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); margin-bottom: 24px; transition: transform 0.3s ease;">
+        <a href="https://github.com/Yufly-Liu/project-three" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
+          <div style="padding: 20px;">
+            <h3 style="color: #3b82f6; margin-bottom: 10px; font-size: 1.2rem;">AI 写作助手</h3>
+            <p style="color: #4b5563; font-size: 1.05rem; line-height: 1.6;">
+              基于大模型 API 的文本生成工具，支持文章润色、摘要生成、多语言翻译，提升写作效率。
+            </p>
+            <p style="margin-top: 12px; font-size: 0.9rem; color: #6b7280;">
+              #AI #Python #NLP #LangChain
+            </p>
+          </div>
+        </a>
+      </article>
     </section>
 
     <footer>

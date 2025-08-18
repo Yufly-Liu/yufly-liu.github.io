@@ -3,146 +3,238 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>刘宇飞 - 计算机视觉 | 深度学习 | 三维重建</title>
+  <title>刘宇飞的主页 - 计算机视觉 | 深度学习 | 三维重建</title>
   <meta name="description" content="刘宇飞，深圳大学硕士，安华光电3D重建算法实习生。研究方向：深度学习、图像处理、高精度三维重建。" />
   <meta name="keywords" content="刘宇飞, 计算机视觉, 深度学习, 3D重建, 图像处理, Python, C++, 深圳大学, ICIVP2025" />
-
-  <!-- 优化字体与图标加载 -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"></noscript>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
   <style>
-    :root {
-      --primary: #1e3a8a;
-      --primary-light: #3b82f6;
-      --text: #4b5563;
-      --bg: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
-      --card-bg: #fff;
-      --radius: 12px;
-      --shadow: 0 4px 12px rgba(0,0,0,0.08);
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-
-    * {margin: 0; padding: 0; box-sizing: border-box;}
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       line-height: 1.6;
-      color: var(--text);
-      background: var(--bg);
+      color: #1a1a1a;
+      background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
       min-height: 100vh;
     }
-
     .container {
-      max-width: 860px;
+      max-width: 840px;
       margin: 0 auto;
-      padding: 60px 24px;
+      padding: 60px 32px;
+      text-align: center;
     }
 
-    header {
-      display: flex; align-items: center; gap: 60px;
-      flex-wrap: wrap; margin-bottom: 50px;
-    }
-
-    header img {
-      width: 130px; height: 130px;
-      border-radius: 50%; object-fit: cover;
-      border: 4px solid white; box-shadow: var(--shadow);
-    }
-
-    h1 {font-size: 2.4rem; font-weight: 700; color: var(--primary);}
-    .subtitle {font-size: 1.1rem; margin: 12px 0 18px;}
-
+    /* 优化链接样式 */
     .links {
-      margin-top: 20px; display: flex; flex-direction: column; gap: 10px;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
       font-size: 0.95rem;
     }
     .link-item {
-      display: flex; align-items: center; gap: 8px;
-      padding: 8px 14px; background: #f9fafb;
-      border-radius: 8px; color: var(--primary);
-      text-decoration: none; box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-      transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      background: white;
+      border-radius: 8px;
+      color: #1e3a8a;
+      text-decoration: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      transition: all 0.3s ease;
     }
     .link-item:hover {
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-      background: #eef2ff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       color: #0c4a6e;
     }
+    .link-item i {
+      font-size: 0.95em;
+      width: 18px;
+      text-align: center;
+    }
 
-    /* Projects */
+    /* 主题色 */
+    .link-item.github { background: #f3f4f6; color: #1e3a8a; }
+    .link-item.github:hover { background: #dbeafe; }
+
+    .link-item.blog { background: #f3f4f6; color: #1e3a8a; }
+    .link-item.blog:hover { background: #e9d5ff; }
+
+    .link-item.email { background: #f3f4f6; color: #1e3a8a; }
+    .link-item.email:hover { background: #fee2e2; }
+
+    .link-item.resume { background: #f3f4f6; color: #1e3a8a; }
+    .link-item.resume:hover { background: #dcfce7; }
+
+    /* 项目展示 */
     .projects h2 {
-      color: var(--primary);
-      margin-bottom: 20px; font-size: 1.6rem;
+      color: #1e3a8a;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      text-align: left;
     }
-    .project-card {
-      background: var(--card-bg);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 18px; transition: transform 0.3s;
+    .projects a {
+      text-decoration: none;
+      color: inherit;
     }
-    .project-card:hover {transform: translateY(-4px);}
-    .project-card h3 {color: var(--primary-light); font-size: 1.1rem; margin-bottom: 10px;}
-    .project-card p {font-size: 0.95rem;}
+    .projects a > div {
+      padding: 18px;
+      transition: transform 0.3s;
+    }
+    .projects a > div:hover {
+      transform: translateY(-4px);
+    }
 
     footer {
-      margin-top: 60px; text-align: center;
-      color: #6b7280; font-size: 0.85rem;
+      margin-top: 60px;
+      color: #6b7280;
+      font-size: 0.85rem;
+      text-align: center;
     }
 
-    @media (max-width: 640px) {
-      header {flex-direction: column; gap: 28px; text-align: center;}
-      .links {flex-direction: row; flex-wrap: wrap; justify-content: center;}
+    /* 响应式 */
+    @media (max-width: 600px) {
+      .container {
+        padding: 40px 20px;
+      }
+      header {
+        flex-direction: column;
+        gap: 28px;
+      }
+      .links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+      }
+      .link-item {
+        padding: 6px 10px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+  <style>
+    /* 防止字体加载闪动 */
+    @font-face {
+      font-family: 'Inter';
+      font-display: swap;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <header>
-      <div style="text-align:center;">
-        <img src="https://avatars.githubusercontent.com/u/208674081?s=400" alt="刘宇飞 头像" loading="lazy">
-        <nav class="links" aria-label="个人链接">
-          <a href="https://github.com/Yufly-Liu" class="link-item" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-          <a href="https://yufei-liu.github.io/blog" class="link-item" target="_blank"><i class="fas fa-blog"></i> 博客</a>
-          <a href="mailto:liuyuf12138@163.com" class="link-item"><i class="fas fa-envelope"></i> 邮箱</a>
-          <a href="https://github.com/Yufly-Liu/Yufly-Liu.github.io/raw/main/resume.pdf" class="link-item" target="_blank"><i class="fas fa-file-alt"></i> 简历</a>
-        </nav>
+    <header style="display: flex; align-items: center; gap: 60px; margin-bottom: 50px; flex-wrap: wrap;">
+      <!-- 左栏：头像与链接 -->
+      <div style="flex: 0 0 160px; text-align: center;">
+        <img src="https://avatars.githubusercontent.com/u/208674081?s=400&u=b71c647256ff0b18b8c7ae5cbeac09a84d6db815&v=4" 
+             alt="刘宇飞 个人头像" 
+             loading="lazy"
+             style="width: 130px; height: 130px; border-radius: 50%; object-fit: cover; border: 4px solid white; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"/>
+        
+        <!-- 链接组 -->
+        <div class="links">
+          <a href="https://github.com/Yufly-Liu" class="link-item github" target="_blank" title="访问我的 GitHub 主页">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a href="https://yufei-liu.github.io/blog" class="link-item blog" target="_blank" title="访问我的技术博客">
+            <i class="fas fa-blog"></i> 博客
+          </a>
+          <a href="mailto:liuyuf12138@163.com" class="link-item email" title="发送邮件给我">
+            <i class="fas fa-envelope"></i> 邮箱
+          </a>
+          <a href="https://github.com/Yufly-Liu/Yufly-Liu.github.io/raw/main/resume.pdf" class="link-item resume" target="_blank" title="下载我的简历 (PDF)">
+            <i class="fas fa-file-alt"></i> 简历
+          </a>
+        </div>
       </div>
 
-      <div style="flex:1; min-width:280px;">
-        <h1>刘宇飞</h1>
-        <p class="subtitle">计算机视觉 | 深度学习 | 图像处理</p>
-        <p>你好！我是深圳大学硕士研究生、安华光电三维重建算法实习生。擅长 C++, Python, Matlab，目前专注于基于深度学习的高精度三维重建。</p>
-        <p style="margin-top:10px;">I maintain several open-source projects on GitHub and enjoy sharing insights. Feel free to connect via email or social media!</p>
+      <!-- 右栏：文字内容 -->
+      <div style="flex: 1; text-align: left; min-width: 300px;">
+        <h1 style="font-size: 2.5rem; font-weight: 700; color: #1e3a8a; margin-bottom: 12px;">刘宇飞</h1>
+        <p class="subtitle" style="font-size: 1.15rem; color: #4b5563; margin-bottom: 18px;">
+          计算机视觉 | 深度学习 | 图像处理
+        </p>
+        <p style="color: #4b5563; line-height: 1.7; font-size: 1.05rem;">
+          你好！我是刘宇飞，深圳大学在读硕士研究生、安华光电三维重建算法实习生。擅长 C++, Python 和 Matlab，目前专注于基于深度学习构建更好的三维重建模型框架，致力于实现挑战性环境下的高精度三维重建。
+        </p>
+        <p style="color: #4b5563; line-height: 1.7; font-size: 1.05rem; margin-top: 12px;">
+          Hello! I'm Liu Yufei, a Master's student at Shenzhen University and an intern in 3D reconstruction algorithms at Anhua Optoelectronics. I am proficient in C++, Python, and Matlab. Currently, I am focusing on building better frameworks for 3D reconstruction models based on deep learning, and am dedicated to achieving high-precision 3D reconstruction in challenging environments.
+        </p>
+        <p style="color: #4b5563; line-height: 1.7; font-size: 1.05rem; margin-top: 12px;">
+          我在 GitHub 上维护多个开源项目，喜欢分享技术心得。欢迎通过邮箱或社交媒体联系我！
+        </p>
       </div>
     </header>
 
-    <main>
-      <section class="projects">
-        <h2>Projects</h2>
-        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:24px;">
-          <a href="https://github.com/Yufly-Liu/project-one" target="_blank" class="project-card">
-            <h3>A Method of Separating Interreflection...</h3>
-            <p>提出一种结合高频掩码与格雷码的互反射分离方法，已发表于 <strong>ICIVP 2025</strong>。</p>
-            <p style="margin-top:10px; font-size:0.85rem; color:#6b7280;">#C++ #OpenCV #三维重建</p>
-          </a>
-
-          <a href="https://github.com/Yufly-Liu/project-two" target="_blank" class="project-card">
-            <h3>天气预报小程序</h3>
-            <p>基于微信小程序开发的天气应用，支持实时天气、空气质量与多城市切换。</p>
-            <p style="margin-top:10px; font-size:0.85rem; color:#6b7280;">#小程序 #JavaScript #API</p>
-          </a>
-
-          <a href="https://github.com/Yufly-Liu/project-three" target="_blank" class="project-card">
-            <h3>AI 写作助手</h3>
-            <p>基于大模型 API 的写作工具，支持润色、摘要、多语言翻译。</p>
-            <p style="margin-top:10px; font-size:0.85rem; color:#6b7280;">#AI #Python #NLP</p>
+    <!-- 项目展示 -->
+    <section class="projects" style="text-align: left;">
+      <h2>Projects</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
+        
+        <!-- 项目 1：学术论文 -->
+        <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+          <a href="https://github.com/Yufly-Liu/project-one" target="_blank">
+            <div>
+              <h3 style="color: #3b82f6; margin-bottom: 10px; font-size: 1.1rem;">A Method of Separating Interreflection in Digital Fringe Projection Profilometry</h3>
+              <p style="color: #4b5563; font-size: 0.95rem; line-height: 1.5;">
+                在结构光三维测量中，凹面物体的互反射会严重影响精度。本文提出使用高频掩码调制条纹与格雷码结合的方法，有效分离互反射干扰。该工作已发表于国际会议 <strong>ICIVP 2025</strong>。
+              </p>
+              <p style="margin-top: 10px; font-size: 0.85rem; color: #6b7280;">
+                #C++ #OpenCV #Matlab #三维重建 #互反射去除
+              </p>
+            </div>
           </a>
         </div>
-      </section>
-    </main>
 
-    <footer>© 2025 刘宇飞 · Built with ❤️ on GitHub Pages</footer>
+        <!-- 项目 2：天气小程序 -->
+        <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+          <a href="https://github.com/Yufly-Liu/project-two" target="_blank">
+            <div>
+              <h3 style="color: #3b82f6; margin-bottom: 10px; font-size: 1.1rem;">天气预报小程序</h3>
+              <p style="color: #4b5563; font-size: 0.95rem; line-height: 1.5;">
+                基于微信小程序开发的天气应用，实时获取城市天气与空气质量，支持定位与多城市切换。
+              </p>
+              <p style="margin-top: 10px; font-size: 0.85rem; color: #6b7280;">
+                #小程序 #API #UI设计 #JavaScript
+              </p>
+            </div>
+          </a>
+        </div>
+
+        <!-- 项目 3：AI 写作助手 -->
+        <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+          <a href="https://github.com/Yufly-Liu/project-three" target="_blank">
+            <div>
+              <h3 style="color: #3b82f6; margin-bottom: 10px; font-size: 1.1rem;">AI 写作助手</h3>
+              <p style="color: #4b5563; font-size: 0.95rem; line-height: 1.5;">
+                基于大模型 API 的文本生成工具，支持文章润色、摘要生成、多语言翻译，提升写作效率。
+              </p>
+              <p style="margin-top: 10px; font-size: 0.85rem; color: #6b7280;">
+                #AI #Python #NLP #LangChain
+              </p>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <footer>
+      © 2025 刘宇飞 · Built with ❤️ on GitHub Pages
+    </footer>
   </div>
+
+  <script>
+    // 可选：添加简单的访问统计（不依赖第三方）
+    // navigator.sendBeacon? 可用于轻量埋点
+  </script>
 </body>
-</html>
+</html>优化一下

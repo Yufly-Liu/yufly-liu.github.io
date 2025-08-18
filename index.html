@@ -20,9 +20,9 @@
       min-height: 100vh;
     }
     .container {
-      max-width: 720px;
+      max-width: 840px;          /* 舒适宽度：840px */
       margin: 0 auto;
-      padding: 60px 40px;
+      padding: 60px 32px;        /* 左右边距适中 */
       text-align: center;
     }
     .projects h2 {
@@ -53,21 +53,25 @@
       .container {
         padding: 40px 20px;
       }
+      header {
+        flex-direction: column;
+        gap: 28px;
+      }
       .links {
-        line-height: 2;
+        line-height: 2.4;
       }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <header style="display: flex; align-items: center; gap: 50px; margin-bottom: 50px; flex-wrap: wrap;">
+    <header style="display: flex; align-items: center; gap: 60px; margin-bottom: 50px; flex-wrap: wrap;">
       <!-- 左栏：头像与链接 -->
-      <div style="flex: 0 0 140px; text-align: center;">
+      <div style="flex: 0 0 160px; text-align: center;">
         <img src="https://avatars.githubusercontent.com/u/208674081?s=400&u=b71c647256ff0b18b8c7ae5cbeac09a84d6db815&v=4" 
-             alt="刘宇飞" class="avatar" 
-             style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 4px solid white; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"/>
-        <div class="links" style="margin-top: 18px; line-height: 2.2; font-size: 0.95rem;">
+             alt="刘宇飞" 
+             style="width: 130px; height: 130px; border-radius: 50%; object-fit: cover; border: 4px solid white; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"/>
+        <div class="links" style="margin-top: 20px; line-height: 2.4; font-size: 0.95rem;">
           <div><a href="https://github.com/Yufly-Liu">GitHub</a></div>
           <div><a href="https://blog.example.com">博客</a></div>
           <div><a href="mailto:liuyuf12138@163.com">邮箱</a></div>
@@ -76,10 +80,10 @@
       </div>
 
       <!-- 右栏：文字内容 -->
-      <div style="flex: 1; text-align: left; min-width: 280px;">
-        <h1 style="font-size: 2.4rem; font-weight: 700; color: #1e3a8a; margin-bottom: 10px;">刘宇飞</h1>
-        <p class="subtitle" style="font-size: 1.1rem; color: #4b5563; margin-bottom: 18px;">
-          计算机视觉 | 深度学习 | 图像处理
+      <div style="flex: 1; text-align: left; min-width: 300px;">
+        <h1 style="font-size: 2.5rem; font-weight: 700; color: #1e3a8a; margin-bottom: 12px;">刘宇飞</h1>
+        <p class="subtitle" style="font-size: 1.15rem; color: #4b5563; margin-bottom: 18px;">
+          计算视觉 | 深度学习 | 图像处理
         </p>
         <p style="color: #4b5563; line-height: 1.7; font-size: 1.05rem;">
           你好！我是刘宇飞，深圳大学在读硕士研究生、安华光电三维重建算法实习生。擅长 C++, Python 和 Matlab，目前专注于基于深度学习构建更好的三维重建模型框架，致力于实现挑战性环境下的高精度三维重建。
@@ -96,7 +100,7 @@
     <!-- 项目展示 -->
     <div class="projects" style="text-align: left;">
       <h2>我的项目</h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
         
         <!-- 项目 1 -->
         <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">

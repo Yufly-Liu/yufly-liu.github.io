@@ -4,8 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>刘宇飞的主页</title>
-  <meta name="description" content="程序员 | 技术博客 | 开源爱好者" />
+  <meta name="description" content="计算机视觉 | 深度学习 | 图像处理" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     * {
       margin: 0;
@@ -20,11 +21,60 @@
       min-height: 100vh;
     }
     .container {
-      max-width: 840px;          /* 舒适宽度：840px */
+      max-width: 840px;
       margin: 0 auto;
-      padding: 60px 32px;        /* 左右边距适中 */
+      padding: 60px 32px;
       text-align: center;
     }
+
+    /* 优化链接样式 */
+    .links {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 0.95rem;
+    }
+    .link-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      background: white;
+      border-radius: 8px;
+      color: #1e3a8a;
+      text-decoration: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      transition: all 0.3s ease;
+    }
+    .link-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      color: #0c4a6e;
+    }
+    .link-item i {
+      font-size: 0.95em;
+      width: 18px;
+      text-align: center;
+    }
+
+    /* GitHub 蓝 */
+    .link-item.github { background: #eef5ff; color: #1e3a8a; }
+    .link-item.github:hover { background: #dbeafe; }
+
+    /* 博客 紫 */
+    .link-item.blog { background: #f9f0ff; color: #7e22ce; }
+    .link-item.blog:hover { background: #e9d5ff; }
+
+    /* 邮箱 红 */
+    .link-item.email { background: #fff0f0; color: #b91c1c; }
+    .link-item.email:hover { background: #fee2e2; }
+
+    /* 简历 绿 */
+    .link-item.resume { background: #f0fff4; color: #166534; }
+    .link-item.resume:hover { background: #dcfce7; }
+
+    /* 项目展示 */
     .projects h2 {
       color: #1e3a8a;
       margin-bottom: 20px;
@@ -42,6 +92,7 @@
     .projects a > div:hover {
       transform: translateY(-4px);
     }
+
     footer {
       margin-top: 60px;
       color: #6b7280;
@@ -49,6 +100,7 @@
       text-align: center;
     }
 
+    /* 响应式 */
     @media (max-width: 600px) {
       .container {
         padding: 40px 20px;
@@ -58,7 +110,14 @@
         gap: 28px;
       }
       .links {
-        line-height: 2.4;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+      }
+      .link-item {
+        padding: 6px 10px;
+        font-size: 0.9rem;
       }
     }
   </style>
@@ -71,11 +130,21 @@
         <img src="https://avatars.githubusercontent.com/u/208674081?s=400&u=b71c647256ff0b18b8c7ae5cbeac09a84d6db815&v=4" 
              alt="刘宇飞" 
              style="width: 130px; height: 130px; border-radius: 50%; object-fit: cover; border: 4px solid white; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"/>
-        <div class="links" style="margin-top: 20px; line-height: 2.4; font-size: 0.95rem;">
-          <div><a href="https://github.com/Yufly-Liu">GitHub</a></div>
-          <div><a href="https://blog.example.com">博客</a></div>
-          <div><a href="mailto:liuyuf12138@163.com">邮箱</a></div>
-          <div><a href="/resume.pdf">简历</a></div>
+        
+        <!-- 链接组 -->
+        <div class="links">
+          <a href="https://github.com/Yufly-Liu" class="link-item github">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a href="https://blog.example.com" class="link-item blog">
+            <i class="fas fa-blog"></i> 博客
+          </a>
+          <a href="mailto:liuyuf12138@163.com" class="link-item email">
+            <i class="fas fa-envelope"></i> 邮箱
+          </a>
+          <a href="/resume.pdf" class="link-item resume">
+            <i class="fas fa-file-alt"></i> 简历
+          </a>
         </div>
       </div>
 

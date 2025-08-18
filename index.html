@@ -1,89 +1,36 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>刘宇飞的主页</title>
-  <meta name="description" content="程序员 | 技术博客 | 开源爱好者" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      line-height: 1.6;
-      color: #1a1a1a;
-      background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
-      min-height: 100vh;
-      padding: 60px 20px;
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    header {
-      margin-bottom: 40px;
-    }
-    h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      color: #1e3a8a;
-      margin-bottom: 12px;
-    }
-    .subtitle {
-      font-size: 1.3rem;
-      color: #4b5563;
-      margin-bottom: 20px;
-    }
-    .avatar {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 5px solid white;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      margin-bottom: 24px;
-    }
-    .links a {
-      display: inline-block;
-      margin: 0 15px;
-      font-weight: 600;
-      color: #3b82f6;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    .links a:hover {
-      color: #1d4ed8;
-    }
-    .bio {
-      margin: 40px 0;
-      font-size: 1.1rem;
-      color: #4b5563;
-      max-width: 700px;
-      text-align: left;
-      background: white;
-      padding: 24px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-      margin-left: auto;
-      margin-right: auto;
-    }
-    footer {
-      margin-top: 40px;
-      color: #6b7280;
-      font-size: 0.9rem;
-    }
-    @media (max-width: 600px) {
-      h1 { font-size: 2.2rem; }
-      .subtitle { font-size: 1.1rem; }
-      .bio { padding: 20px; }
-    }
-  </style>
-</head>
+<header style="display: flex; align-items: center; gap: 40px; margin-bottom: 50px; flex-wrap: wrap;">
+  <!-- 左栏：头像与链接 -->
+  <div style="flex: 0 0 160px; text-align: center; min-width: 160px;">
+    <img src="https://avatars.githubusercontent.com/u/208674081?s=400&u=b71c647256ff0b18b8c7ae5cbeac09a84d6db815&v=4" 
+         alt="刘宇飞" class="avatar" 
+         style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 5px solid white; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"/>
+    <div class="links" style="margin-top: 20px; line-height: 2;">
+      <div><a href="https://github.com/Yufly-Liu">GitHub</a></div>
+      <div><a href="https://blog.example.com">博客</a></div>
+      <div><a href="liuyuf12138@163.com">邮箱</a></div>
+      <div><a href="/resume.pdf">简历</a></div>
+    </div>
+  </div>
+
+  <!-- 右栏：文字内容 -->
+  <div style="flex: 1; text-align: left; min-width: 300px;">
+    <h1 style="font-size: 2.6rem; font-weight: 700; color: #1e3a8a; margin-bottom: 12px;">刘宇飞</h1>
+    <p class="subtitle" style="font-size: 1.2rem; color: #4b5563; margin-bottom: 20px;">
+      计算机视觉 | 深度学习 | 图像处理
+    </p>
+    <p style="color: #4b5563; line-height: 1.7; font-size: 1.05rem;">
+      你好！我是刘宇飞，深圳大学在读硕士研究生、安华光电三维重建算法实习生。擅长 C++, Python 和 Matlab，目前专注于基于深度学习构建更好的三维重建模型框架，致力于实现挑战性环境下的高精度三维重建。
+    </p>
+    <p style="color: #4b5563; line-height: 1.7; font-size: 1.05rem; margin-top: 12px;">
+      Hello! I'm Liu Yufei, a master's student at Shenzhen University and an intern in 3D reconstruction algorithms at Anhua Optoelectronics. I am proficient in C++, Python, and Matlab. Currently, I am focusing on building better frameworks for 3D reconstruction models based on deep learning, and am dedicated to achieving high-precision 3D reconstruction in challenging environments.
+    </p>
+    <p style="color: #4b5563; line-height: 1.7; font-size: 1.05rem; margin-top: 12px;">
+      我在 GitHub 上维护多个开源项目，喜欢分享技术心得。欢迎通过邮箱或社交媒体联系我！
+    </p>
+  </div>
+</header>
 <body>
   <div class="container">
     <header>

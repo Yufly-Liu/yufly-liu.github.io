@@ -132,14 +132,12 @@
 <body>
   <div class="container">
     <header style="display: flex; align-items: center; gap: 60px; margin-bottom: 50px; flex-wrap: wrap;">
-      <!-- 左栏：头像与链接 -->
       <div style="flex: 0 0 160px; text-align: center;">
         <img src="https://avatars.githubusercontent.com/u/208674081?s=400&u=b71c647256ff0b18b8c7ae5cbeac09a84d6db815&v=4" 
              alt="刘宇飞 个人头像" 
              loading="lazy"
              style="width: 130px; height: 130px; border-radius: 50%; object-fit: cover; border: 4px solid white; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"/>
         
-        <!-- 链接组 -->
         <div class="links">
           <a href="https://github.com/Yufly-Liu" class="link-item github" target="_blank" title="访问我的 GitHub 主页">
             <i class="fab fa-github"></i> GitHub
@@ -156,7 +154,6 @@
         </div>
       </div>
 
-      <!-- 右栏：文字内容 -->
       <div style="flex: 1; text-align: left; min-width: 300px;">
         <h1 style="font-size: 2.5rem; font-weight: 700; color: #1e3a8a; margin-bottom: 12px;">刘宇飞</h1>
         <p class="subtitle" style="font-size: 1.15rem; color: #4b5563; margin-bottom: 18px;">
@@ -174,43 +171,39 @@
       </div>
     </header>
 
-    <!-- 项目展示：上下排版 -->
     <section class="projects" style="text-align: left; margin-top: 40px;">
       <h2 style="color: #1e3a8a; margin-bottom: 24px; font-size: 1.8rem; border-left: 4px solid #3b82f6; padding-left: 12px;">
         Projects
       </h2>
-    
-      <!-- 项目 1 -->
+      
       <article style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); margin-bottom: 24px; transition: transform 0.3s ease;">
         <a href="https://github.com/Yufly-Liu/GlobalComponentSeparation" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
           <div style="padding: 20px;">
             <h3 style="color: #3b82f6; margin-bottom: 10px; font-size: 1.2rem;">A Method of Separating Interreflection in Digital Fringe Projection Profilometry</h3>
             <p style="color: #4b5563; font-size: 1.05rem; line-height: 1.6;">
-              In structured light digital fringe projection profilometry, the surface profile of an object is measured by projecting fringes. When measuring the surface of concave objects, interreflections exist, which affect the measurement accuracy. This paper proposes to use high-frequency mask modulated projected fringes and Gray code images to complete the design of projected coding patterns. This method has been published in the international conference ICIVP 2025. <strong>ICIVP 2025</strong>。
+              In structured light digital fringe projection profilometry, the surface profile of an object is measured by projecting fringes. When measuring the surface of concave objects, interreflections exist, which affect the measurement accuracy. This paper proposes to use high-frequency mask modulated projected fringes and Gray code images to complete the design of projected coding patterns. This method has been published in the international conference <strong>ICIVP 2025</strong>.
             </p>
             <p style="margin-top: 12px; font-size: 0.9rem; color: #6b7280;">
-              #C++ #OpenCV #Matlab #3D reconstruction #Interreflection
+              #C++ #OpenCV #Matlab #3D Reconstruction #Interreflection
             </p>
           </div>
         </a>
       </article>
-    
-      <!-- 项目 2 -->
+      
       <article style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); margin-bottom: 24px; transition: transform 0.3s ease;">
-        <a href="https://github.com/Yufly-Liu/RRNet" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
+        <a href="https://github.com/Yufly-Liu/Swin-TLS" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
           <div style="padding: 20px;">
-            <h3 style="color: #3b82f6; margin-bottom: 10px; font-size: 1.2rem;">RRNet: A Line Structured Light Interreflection Removal Model Based on Swin Transformer</h3>
+            <h3 style="color: #3b82f6; margin-bottom: 10px; font-size: 1.2rem;">Swin-TLS: Deep Learning-Based Interreflection Suppression for 3D Reconstruction</h3>
             <p style="color: #4b5563; font-size: 1.05rem; line-height: 1.6;">
-              A network is designed and trained based on Swin Transformer. At the image level, pictures with intense interreflections are input into the network, and the network outputs images with interreflections removed.
+              A deep learning-based pipeline designed to suppress severe interreflections in 3D scanning of highly reflective metal parts. By replacing traditional Gray codes with sparse temporal line-shifting (TLS) coding, this method utilizes a Swin Transformer-based network (SUNet) with a composite loss function to efficiently remove structured highlight noise. It significantly reduces absolute height measurement errors while preserving high-frequency fringe edges.
             </p>
             <p style="margin-top: 12px; font-size: 0.9rem; color: #6b7280;">
-              #Transformer #Python #Pytorch #3D reconstruction #Interreflection
+              #Swin Transformer #Deep Learning #PyTorch #3D Reconstruction #Interreflection
             </p>
           </div>
         </a>
       </article>
-    
-      <!-- 项目 3 -->
+      
       <article style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); margin-bottom: 24px; transition: transform 0.3s ease;">
         <a href="https://github.com/Yufly-Liu/project-three" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
           <div style="padding: 20px;">
@@ -219,7 +212,7 @@
               The 2D Gaussian (2DGS) framework for novel view synthesis and high-precision 3D reconstruction enhances the geometric consistency of traditional 3DGS by flattening the scene representation from 3D ellipsoids into 2D elliptical disks (which inherently encode surface normal information), optimizing projection accuracy through ray-lattice intersection calculations, and introducing depth distortion and normal consistency losses to significantly reduce reconstruction noise, achieving a 40% reduction in geometric error compared to 3DGS on the DTU dataset while supporting real-time rendering (>30 FPS).
             </p>
             <p style="margin-top: 12px; font-size: 0.9rem; color: #6b7280;">
-              #AI #Pytorch #3D reconstruction #3DGS #2DGS
+              #AI #PyTorch #3D Reconstruction #3DGS #2DGS
             </p>
           </div>
         </a>

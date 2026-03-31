@@ -4,18 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>刘宇飞的主页 - 计算机视觉 | 深度学习 | 三维重建</title>
-  <meta name="description" content="刘宇飞，深圳大学硕士，安华光电3D重建算法实习生。研究方向：深度学习、图像处理、高精度三维重建。" />
-  <meta name="keywords" content="刘宇飞, 计算机视觉, 深度学习, 3D重建, 图像处理, Python, C++, 深圳大学, ICIVP2025" />
+  <meta name="description" content="刘宇飞，深圳大学硕士，曾于安华光电与其域创新担任算法实习生。研究方向：深度学习、图像处理、高精度三维重建。" />
+  <meta name="keywords" content="刘宇飞, 计算机视觉, 深度学习, 3D重建, 图像处理, Python, C++, 深圳大学, 其域创新, 安华光电" />
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"></noscript>
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       line-height: 1.6;
@@ -23,109 +19,47 @@
       background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
       min-height: 100vh;
     }
-    .container {
-      max-width: 840px;
-      margin: 0 auto;
-      padding: 60px 32px;
-      text-align: center;
-    }
-
-    /* 优化链接样式 */
-    .links {
-      margin-top: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      font-size: 0.95rem;
-    }
+    .container { max-width: 840px; margin: 0 auto; padding: 60px 32px; }
+    
+    /* 链接项样式 */
+    .links { margin-top: 20px; display: flex; flex-direction: column; gap: 10px; font-size: 0.95rem; }
     .link-item {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 14px;
-      background: white;
-      border-radius: 8px;
-      color: #1e3a8a;
-      text-decoration: none;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-      transition: all 0.3s ease;
+      display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px;
+      background: white; border-radius: 8px; color: #1e3a8a; text-decoration: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06); transition: all 0.3s ease;
     }
-    .link-item:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      color: #0c4a6e;
-    }
-    .link-item i {
-      font-size: 0.95em;
-      width: 18px;
-      text-align: center;
+    .link-item:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); color: #0c4a6e; }
+    .link-item i { width: 18px; text-align: center; }
+    .link-item.github { background: #f3f4f6; }
+    .link-item.blog { background: #f3f4f6; }
+    .link-item.email { background: #f3f4f6; }
+    .link-item.resume { background: #f3f4f6; }
+
+    /* 板块标题 */
+    section h2 {
+      color: #1e3a8a; margin-bottom: 24px; font-size: 1.8rem;
+      border-left: 4px solid #3b82f6; padding-left: 12px; text-align: left;
     }
 
-    /* 主题色 */
-    .link-item.github { background: #f3f4f6; color: #1e3a8a; }
-    .link-item.github:hover { background: #dbeafe; }
-
-    .link-item.blog { background: #f3f4f6; color: #1e3a8a; }
-    .link-item.blog:hover { background: #e9d5ff; }
-
-    .link-item.email { background: #f3f4f6; color: #1e3a8a; }
-    .link-item.email:hover { background: #fee2e2; }
-
-    .link-item.resume { background: #f3f4f6; color: #1e3a8a; }
-    .link-item.resume:hover { background: #dcfce7; }
-
-    /* 项目展示 */
-    .projects h2 {
-      color: #1e3a8a;
-      margin-bottom: 20px;
-      font-size: 1.8rem;
-      text-align: left;
+    /* 卡片通用样式 */
+    .card {
+      background: white; border-radius: 12px; overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08); margin-bottom: 24px;
+      padding: 20px; text-align: left; transition: transform 0.3s ease;
     }
-    .projects a {
-      text-decoration: none;
-      color: inherit;
-    }
-    .projects a > div {
-      padding: 18px;
-      transition: transform 0.3s;
-    }
-    .projects a > div:hover {
-      transform: translateY(-4px);
-    }
+    .card:hover { transform: translateY(-4px); }
+    .card h3 { color: #3b82f6; margin-bottom: 8px; font-size: 1.2rem; }
+    .card .meta { color: #6b7280; font-size: 0.9rem; margin-bottom: 12px; font-weight: 600; }
+    .card p { color: #4b5563; font-size: 1.05rem; line-height: 1.6; }
+    .card ul { margin-left: 20px; color: #4b5563; font-size: 0.95rem; margin-top: 8px; }
+    .card .tags { margin-top: 12px; font-size: 0.85rem; color: #9ca3af; }
 
-    footer {
-      margin-top: 60px;
-      color: #6b7280;
-      font-size: 0.85rem;
-      text-align: center;
-    }
+    footer { margin-top: 60px; color: #6b7280; font-size: 0.85rem; text-align: center; }
 
-    /* 响应式 */
     @media (max-width: 600px) {
-      .container {
-        padding: 40px 20px;
-      }
-      header {
-        flex-direction: column;
-        gap: 28px;
-      }
-      .links {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px;
-      }
-      .link-item {
-        padding: 6px 10px;
-        font-size: 0.9rem;
-      }
-    }
-  </style>
-  <style>
-    /* 防止字体加载闪动 */
-    @font-face {
-      font-family: 'Inter';
-      font-display: swap;
+      .container { padding: 40px 20px; }
+      header { flex-direction: column; text-align: center; }
+      .links { flex-direction: row; flex-wrap: wrap; justify-content: center; }
     }
   </style>
 </head>
@@ -133,100 +67,65 @@
   <div class="container">
     <header style="display: flex; align-items: center; gap: 60px; margin-bottom: 50px; flex-wrap: wrap;">
       <div style="flex: 0 0 160px; text-align: center;">
-        <img src="https://avatars.githubusercontent.com/u/208674081?s=400&u=b71c647256ff0b18b8c7ae5cbeac09a84d6db815&v=4" 
-             alt="刘宇飞 个人头像" 
-             loading="lazy"
-             style="width: 130px; height: 130px; border-radius: 50%; object-fit: cover; border: 4px solid white; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"/>
-        
+        <img src="https://avatars.githubusercontent.com/u/208674081?s=400&v=4" 
+             alt="刘宇飞" style="width: 130px; height: 130px; border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"/>
         <div class="links">
-          <a href="https://github.com/Yufly-Liu" class="link-item github" target="_blank" title="访问我的 GitHub 主页">
-            <i class="fab fa-github"></i> GitHub
-          </a>
-          <a href="https://yufei-liu.github.io/blog" class="link-item blog" target="_blank" title="访问我的技术博客">
-            <i class="fas fa-blog"></i> 博客
-          </a>
-          <a href="mailto:liuyuf12138@163.com" class="link-item email" title="发送邮件给我">
-            <i class="fas fa-envelope"></i> 邮箱
-          </a>
-          <a href="https://github.com/Yufly-Liu/Yufly-Liu.github.io/raw/main/resume.pdf" class="link-item resume" target="_blank" title="下载我的简历 (PDF)">
-            <i class="fas fa-file-alt"></i> 简历
-          </a>
+          <a href="https://github.com/Yufly-Liu" class="link-item github" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://yufei-liu.github.io/blog" class="link-item blog" target="_blank"><i class="fas fa-blog"></i> 博客</a>
+          <a href="mailto:liuyuf12138@163.com" class="link-item email"><i class="fas fa-envelope"></i> 邮箱</a>
+          <a href="https://github.com/Yufly-Liu/Yufly-Liu.github.io/raw/main/resume.pdf" class="link-item resume" target="_blank"><i class="fas fa-file-alt"></i> 简历</a>
         </div>
       </div>
-
       <div style="flex: 1; text-align: left; min-width: 300px;">
         <h1 style="font-size: 2.5rem; font-weight: 700; color: #1e3a8a; margin-bottom: 12px;">刘宇飞</h1>
-        <p class="subtitle" style="font-size: 1.15rem; color: #4b5563; margin-bottom: 18px;">
-          计算机视觉 | 深度学习 | 图像处理
-        </p>
-        <p style="color: #4b5563; line-height: 1.7; font-size: 1.05rem;">
-          你好！我是刘宇飞，深圳大学在读硕士研究生、安华光电三维重建算法实习生。擅长 C++, Python 和 Matlab，目前专注于基于深度学习构建更好的三维重建模型框架，致力于实现挑战性环境下的高精度三维重建。
-        </p>
-        <p style="color: #4b5563; line-height: 1.7; font-size: 1.05rem; margin-top: 12px;">
-          Hello! I'm Liu Yufei, a Master's student at Shenzhen University and an intern in 3D reconstruction algorithms at Anhua Optoelectronics. I am proficient in C++, Python, and Matlab. Currently, I am focusing on building better frameworks for 3D reconstruction models based on deep learning, and am dedicated to achieving high-precision 3D reconstruction in challenging environments.
-        </p>
-        <p style="color: #4b5563; line-height: 1.7; font-size: 1.05rem; margin-top: 12px;">
-          我在 GitHub 上维护多个开源项目，喜欢分享技术心得。欢迎通过邮箱或社交媒体联系我！
+        <p style="font-size: 1.15rem; color: #4b5563; margin-bottom: 18px;">计算机视觉 | 深度学习 | 三维重建</p>
+        <p style="color: #4b5563; font-size: 1.05rem;">
+          你好！我是刘宇飞，深圳大学在读硕士，曾先后在<b>安华光电</b>与<b>其域创新</b>从事算法相关实习。目前专注于基于深度学习的三维重建模型框架，致力于挑战性环境下的高精度重建。
         </p>
       </div>
     </header>
 
-    <section class="projects" style="text-align: left; margin-top: 40px;">
-      <h2 style="color: #1e3a8a; margin-bottom: 24px; font-size: 1.8rem; border-left: 4px solid #3b82f6; padding-left: 12px;">
-        Projects
-      </h2>
+    <section>
+      <h2>Experience</h2>
       
-      <article style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); margin-bottom: 24px; transition: transform 0.3s ease;">
-        <a href="https://github.com/Yufly-Liu/GlobalComponentSeparation" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
-          <div style="padding: 20px;">
-            <h3 style="color: #3b82f6; margin-bottom: 10px; font-size: 1.2rem;">A Method of Separating Interreflection in Digital Fringe Projection Profilometry</h3>
-            <p style="color: #4b5563; font-size: 1.05rem; line-height: 1.6;">
-              In structured light digital fringe projection profilometry, the surface profile of an object is measured by projecting fringes. When measuring the surface of concave objects, interreflections exist, which affect the measurement accuracy. This paper proposes to use high-frequency mask modulated projected fringes and Gray code images to complete the design of projected coding patterns. This method has been published in the international conference <strong>ICIVP 2025</strong>.
-            </p>
-            <p style="margin-top: 12px; font-size: 0.9rem; color: #6b7280;">
-              #C++ #OpenCV #Matlab #3D Reconstruction #Interreflection
-            </p>
-          </div>
-        </a>
-      </article>
+      <div class="card">
+        <h3>算法实习生 - LCC算法组</h3>
+        <div class="meta">深圳市其域创新科技有限公司 | 2025.11 - 2026.03</div>
+        <p>参与计算机视觉与轻量化匹配模型的相关研发工作，致力于提升模型在宽基线、大视角等复杂移动端场景下的泛化能力与匹配精度。</p>
+      </div>
+
+      <div class="card">
+        <h3>三维视觉算法实习生</h3>
+        <div class="meta">深圳市安华光电技术股份有限公司 | 2024.08 - 2025.08</div>
+        <p>主要参与结构光三维重建 AOI 系统的底层算法预研与开发，涉及工业级高精度相机标定、投影仪标定以及三维形貌重建等相关工作。</p>
+      </div>
+    </section>
+
+    <section style="margin-top: 40px;">
+      <h2>Selected Projects</h2>
       
-      <article style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); margin-bottom: 24px; transition: transform 0.3s ease;">
-        <a href="https://github.com/Yufly-Liu/Swin-TLS" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
-          <div style="padding: 20px;">
-            <h3 style="color: #3b82f6; margin-bottom: 10px; font-size: 1.2rem;">Swin-TLS: Deep Learning-Based Interreflection Suppression for 3D Reconstruction</h3>
-            <p style="color: #4b5563; font-size: 1.05rem; line-height: 1.6;">
-              A deep learning-based pipeline designed to suppress severe interreflections in 3D scanning of highly reflective metal parts. By replacing traditional Gray codes with sparse temporal line-shifting (TLS) coding, this method utilizes a Swin Transformer-based network (SUNet) with a composite loss function to efficiently remove structured highlight noise. It significantly reduces absolute height measurement errors while preserving high-frequency fringe edges.
-            </p>
-            <p style="margin-top: 12px; font-size: 0.9rem; color: #6b7280;">
-              #Swin Transformer #Deep Learning #PyTorch #3D Reconstruction #Interreflection
-            </p>
-          </div>
-        </a>
-      </article>
-      
-      <article style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); margin-bottom: 24px; transition: transform 0.3s ease;">
-        <a href="https://github.com/Yufly-Liu/project-three" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
-          <div style="padding: 20px;">
-            <h3 style="color: #3b82f6; margin-bottom: 10px; font-size: 1.2rem;">Geometrically Accurate Radiance Field Reconstruction Based on 2D Gaussian Lattice</h3>
-            <p style="color: #4b5563; font-size: 1.05rem; line-height: 1.6;">
-              The 2D Gaussian (2DGS) framework for novel view synthesis and high-precision 3D reconstruction enhances the geometric consistency of traditional 3DGS by flattening the scene representation from 3D ellipsoids into 2D elliptical disks (which inherently encode surface normal information), optimizing projection accuracy through ray-lattice intersection calculations, and introducing depth distortion and normal consistency losses to significantly reduce reconstruction noise, achieving a 40% reduction in geometric error compared to 3DGS on the DTU dataset while supporting real-time rendering (>30 FPS).
-            </p>
-            <p style="margin-top: 12px; font-size: 0.9rem; color: #6b7280;">
-              #AI #PyTorch #3D Reconstruction #3DGS #2DGS
-            </p>
-          </div>
-        </a>
-      </article>
+      <div class="card">
+        <h3><a href="https://github.com/Yufly-Liu/Swin-TLS" target="_blank" style="text-decoration:none; color:inherit;">Swin-TLS: 抗互反射 3D 重建深度学习模型</a></h3>
+        <p>针对高反光金属工件的互反射畸变痛点，研发分场景抑制算法：</p>
+        <ul>
+          <li>提出高频二值掩膜调制策略，实现物理级光照分量显式解耦。</li>
+          <li>采用 Swin Transformer 结合权重 MSE 损失，解决强反射场景下的噪声抑制难题。</li>
+          <li>将金属台阶测量误差由 0.081mm 显著降至 0.021mm (↓74.1%)。</li>
+        </ul>
+        <div class="tags">#PyTorch #Swin Transformer #C++ #3D Reconstruction</div>
+      </div>
+
+      <div class="card">
+        <h3>基于高频掩膜调制的互反射分离方法</h3>
+        <div class="meta">已发表于 ICIVP 2025 国际会议</div>
+        <p>提出一种结合高频掩膜调制与格雷码设计的投影编码方案，有效提升了凹面物体的测量精度。</p>
+        <div class="tags">#Structured Light #Image Processing #Matlab</div>
+      </div>
     </section>
 
     <footer>
-      © 2025 刘宇飞 · Built with ❤️ on GitHub Pages
+      © 2026 刘宇飞 · Built with ❤️ on GitHub Pages
     </footer>
   </div>
-
-  <script>
-    // 可选：添加简单的访问统计（不依赖第三方）
-    // navigator.sendBeacon? 可用于轻量埋点
-  </script>
 </body>
 </html>
